@@ -1,6 +1,8 @@
 .Dictionary {
-    display: inline-block;
-    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
    
 }
 
