@@ -7,10 +7,10 @@ export default function App() {
     <div className="App">
       <div className="container">
       <header className="App-header">
-       <img src={logo} className="App-logo img-fluid" alt="logo" />
+       <h1 className="text-center">DICTIONARY APP</h1>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="sunrise" />
         </main> 
       <footer className="App-footer mt-5">
         <small>Coded by Fainche Mckeown</small>
