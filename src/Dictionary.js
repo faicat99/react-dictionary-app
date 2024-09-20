@@ -9,6 +9,7 @@ export default function Dictionary(props) {
     let [loaded, setLoaded] = useState(false);
 
     function handleResponse(response) {
+        console.log(response.data[0]);
          setResults(response.data[0]); 
     }
 
@@ -38,15 +39,17 @@ export default function Dictionary(props) {
         return (
         <div className="Dictionary">
             <section>
-            <form onSubmit={handleSubmit}>
-               <input type="search"
-               autoFocus={true}
-               onChange={handleKeywordChange}/>
-            </form>
-            <div className="hint mt-1">Suggested words to search: book, music, forest, yoga, sunrise... </div>
+                <h2>What do you want to look up?</h2>
+                    <form onSubmit={handleSubmit}>
+                        <input type="search"
+                        autoFocus={true}
+                        onChange={handleKeywordChange}
+                        defaultValue={props.defaultKeyword}/>
+                    </form>
+                        <div className="hint mt-1">Suggested words to search: book, music, forest, yoga, sunrise... </div>
             </section>
-            <Results results={results} />
-        </div>
+                <Results results={results} />
+            </div>
         );
     } else {
         load();
